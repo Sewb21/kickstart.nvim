@@ -467,12 +467,5 @@ cmp.setup {
     { name = 'path' },
   },
 }
-
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = { "*.js", "*.jsx", "*.ts", "*.tsx", "*.css", "*.scss", "*.json", "*.md", "*.html", "*.svelte" },
-  callback = function()
-    vim.cmd("Neoformat prettier")
-  end,
-})
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
