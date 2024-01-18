@@ -41,9 +41,7 @@ vim.api.nvim_set_keymap('n', '<leader>bp', ':bprev<CR>', { noremap = true, silen
 -- Close the current buffer
 vim.api.nvim_set_keymap('n', '<leader>bd', ':bd<CR>', { noremap = true, silent = true, desc = 'Close buffer' })
 -- Close all buffers except the current one
-vim.api.nvim_set_keymap('n', '<leader>ba', ':1,9bd|bd!<CR>', { noremap = true, silent = true, desc = 'Close all buffers except current' })
--- Close all buffers
-vim.api.nvim_set_keymap('n', '<leader>bda', ':bufdo bd<CR>', { noremap = true, silent = true, desc = 'Close all buffers' })
+vim.api.nvim_set_keymap('n', '<leader>ba', [[:1,9bd|bd!<CR>]], { noremap = true, silent = true, desc = 'Close all buffers except current' })
 -- Toggle the NvimTree file explorer
 vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true, desc = 'Toggle file explorer' })
 -- Focus on the NvimTree file explorer (if already open)
