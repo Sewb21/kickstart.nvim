@@ -29,6 +29,6 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnos
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
--- Buffers
-vim.keymap.set('n', '<C-h>', ':bprev<CR>', silent)
-vim.keymap.set('n', '<C-l>', ':bnext<CR>', silent)
+-- Quickfix
+vim.keymap.set('n', '<Space>,', ':cp<CR>', silent)
+vim.keymap.set('n', '<Space>.', ':cn<CR>', silent)

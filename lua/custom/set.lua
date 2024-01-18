@@ -43,5 +43,9 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = 4
 
 vim.o.smartindent = true
+vim.o.smarttab = true
+vim.o.autoindent = true
+
+vim.o.backspace = 'indent,eol,start'
 
 vim.o.scrolloff = 8

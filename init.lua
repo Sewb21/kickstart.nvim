@@ -188,24 +188,25 @@ require('lazy').setup({
       end,
     },
   },
-  
- -- THEME
+
+  -- THEME
   {
-    "folke/tokyonight.nvim",
+    'folke/tokyonight.nvim',
     lazy = false,
     priority = 1000,
     config = function()
       -- load the colorscheme here
-      vim.cmd([[colorscheme tokyonight]])
+      vim.cmd [[colorscheme tokyonight]]
     end,
   },
-  { "nvim-lua/plenary.nvim" },
+  { 'nvim-lua/plenary.nvim' },
   {
-    "nvim-tree/nvim-web-devicons",
+    'nvim-tree/nvim-web-devicons',
     config = function()
-      require("nvim-web-devicons").setup({ default = true })
+      require('nvim-web-devicons').setup { default = true }
     end,
-  },  {
+  },
+  {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
     -- See `:help lualine.txt`
@@ -351,6 +352,7 @@ end
 
 -- document existing key chains
 require('which-key').register {
+  ['<leader>b'] = { name = '[B]uffer', _ = 'which_key_ignore' },
   ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
   ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
   ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
