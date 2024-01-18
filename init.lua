@@ -188,17 +188,24 @@ require('lazy').setup({
       end,
     },
   },
-
+  
+ -- THEME
   {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
+    "folke/tokyonight.nvim",
+    lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'onedark'
+      -- load the colorscheme here
+      vim.cmd([[colorscheme tokyonight]])
     end,
   },
-
+  { "nvim-lua/plenary.nvim" },
   {
+    "nvim-tree/nvim-web-devicons",
+    config = function()
+      require("nvim-web-devicons").setup({ default = true })
+    end,
+  },  {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
     -- See `:help lualine.txt`
