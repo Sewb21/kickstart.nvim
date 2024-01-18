@@ -50,4 +50,4 @@ vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = tru
 vim.api.nvim_set_keymap('n', '<leader>E', ':NvimTreeFocus<CR>', { noremap = true, silent = true, desc = 'Focus file explorer' })
 
 -- Don't yank on visual paste
-keymap('v', 'p', '"_dP', silent)
+vim.api.nvim_set_keymap('v', 'p', '"_dP', silent)
