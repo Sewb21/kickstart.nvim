@@ -17,14 +17,19 @@ return {
       'NvimTreeFindFile',
       'NvimTreeFindFileToggle',
     },
-    keys = {
-      { '<C-e>', "<cmd>lua require('nvim-tree.api').tree.toggle()<CR>", desc = 'NvimTree' },
-    },
     config = function()
       require 'custom.plugins.config.tree'
     end,
   },
   {
     'f-person/git-blame.nvim',
+  },
+  {
+    'ThePrimeagen/harpoon',
+    branch = 'harpoon2',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      require 'custom.plugins.config.harpoon'
+    end,
   },
 }

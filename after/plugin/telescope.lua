@@ -1,4 +1,3 @@
-
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
 
@@ -72,7 +71,7 @@ vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = 
 vim.defer_fn(function()
   require('nvim-treesitter.configs').setup {
     -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = {'lua', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'html', 'svelte' },
+    ensure_installed = { 'lua', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'html', 'svelte' },
 
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
     auto_install = false,
@@ -124,14 +123,13 @@ vim.defer_fn(function()
       },
       swap = {
         enable = true,
-        swap_next = {
-          ['<leader>a'] = '@parameter.inner',
-        },
-        swap_previous = {
-          ['<leader>A'] = '@parameter.inner',
-        },
+        -- swap_next = {
+        --   ['<leader>a'] = '@parameter.inner',
+        -- },
+        -- swap_previous = {
+        --   ['<leader>A'] = '@parameter.inner',
+        -- },
       },
     },
   }
 end, 0)
-

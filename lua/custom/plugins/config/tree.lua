@@ -144,6 +144,11 @@ require('nvim-tree').setup {
   },
 }
 
-vim.api.nvim_set_keymap('n', '<C-e>', "<cmd>lua require('nvim-tree.api').tree.toggle()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>ex', "<cmd>lua require('nvim-tree.api').tree.toggle()<CR>", { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap('n', '<leader>E', "<cmd>lua require('nvim-tree.api').tree.focus()<CR>", { noremap = true, silent = true, desc = 'Focus file explorer' })
+vim.api.nvim_set_keymap(
+  'n',
+  '<leader>Ex',
+  "<cmd>lua require('nvim-tree.api').tree.focus()<CR>",
+  { noremap = true, silent = true, desc = 'Focus file explorer' }
+)
