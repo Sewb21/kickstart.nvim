@@ -1,3 +1,5 @@
+local silent = { silent = true }
+
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
@@ -5,11 +7,11 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Open explorer
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 
 -- Copilot map
 vim.g.copilot_no_tab_map = true
-vim.api.nvim_set_keymap("i", "<Tab>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+vim.api.nvim_set_keymap('i', '<Tab>', 'copilot#Accept("<CR>")', { silent = true, expr = true })
 
 -- [[ Basic Keymaps ]]
 
@@ -27,4 +29,6 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnos
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
-
+-- Buffers
+vim.keymap.set('n', '<C-h>', ':bprev<CR>', silent)
+vim.keymap.set('n', '<C-l>', ':bnext<CR>', silent)
