@@ -1,3 +1,5 @@
+-- This has been commented out but is still here for reference.
+
 local api = require 'nvim-tree.api'
 
 local git_icons = {

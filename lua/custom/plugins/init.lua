@@ -32,12 +32,20 @@ return {
       require 'custom.plugins.config.harpoon'
     end,
   },
-  'ThePrimeagen/refactoring.nvim',
-  dependencies = {
-    'nvim-lua/plenary.nvim',
-    'nvim-treesitter/nvim-treesitter',
+  {
+    'ThePrimeagen/refactoring.nvim',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'nvim-treesitter/nvim-treesitter',
+    },
+    config = function()
+      require 'custom.plugins.config.refactoring'
+    end,
   },
-  config = function()
-    require 'custom.plugins.config.refactoring'
-  end,
+  {
+    'aznhe21/actions-preview.nvim',
+    config = function()
+      vim.keymap.set({ 'v', 'n' }, 'ca', require('actions-preview').code_actions)
+    end,
+  },
 }
