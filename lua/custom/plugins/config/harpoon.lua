@@ -4,9 +4,12 @@ local harpoon = require 'harpoon'
 harpoon:setup {}
 -- REQUIRED
 
-vim.keymap.set('n', '<leader>a', function()
+vim.keymap.set('n', '<leader>ha', function()
   harpoon:list():append()
-end)
+end, { desc = 'Add current buffer to harpoon list' })
+vim.keymap.set('n', '<leader>hd', function()
+  harpoon:list():remove()
+end, { desc = 'Remove current buffer from harpoon list' })
 vim.keymap.set('n', '<C-1>', function()
   harpoon:list():select(1)
 end)

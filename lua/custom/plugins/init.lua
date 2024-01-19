@@ -32,4 +32,12 @@ return {
       require 'custom.plugins.config.harpoon'
     end,
   },
+  'ThePrimeagen/refactoring.nvim',
+  dependencies = {
+    'nvim-lua/plenary.nvim',
+    'nvim-treesitter/nvim-treesitter',
+  },
+  config = function()
+    require 'custom.plugins.config.refactoring'
+  end,
 }
