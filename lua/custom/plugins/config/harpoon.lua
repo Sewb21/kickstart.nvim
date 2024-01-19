@@ -7,17 +7,20 @@ harpoon:setup {}
 vim.keymap.set('n', '<leader>a', function()
   harpoon:list():append()
 end)
-vim.keymap.set('n', '<C-h>', function()
+vim.keymap.set('n', '<C-1>', function()
   harpoon:list():select(1)
 end)
-vim.keymap.set('n', '<C-t>', function()
+vim.keymap.set('n', '<C-2>', function()
   harpoon:list():select(2)
 end)
-vim.keymap.set('n', '<C-n>', function()
+vim.keymap.set('n', '<C-3>', function()
   harpoon:list():select(3)
 end)
-vim.keymap.set('n', '<C-s>', function()
+vim.keymap.set('n', '<C-4>', function()
   harpoon:list():select(4)
+end)
+vim.keymap.set('n', '<C-5>', function()
+  harpoon:list():select(5)
 end)
 
 -- Toggle previous & next buffers stored within Harpoon list
@@ -51,3 +54,19 @@ end
 vim.keymap.set('n', '<C-e>', function()
   toggle_telescope(harpoon:list())
 end, { desc = 'Open harpoon window' })
+
+harpoon:extend {
+  UI_CREATE = function(cx)
+    vim.keymap.set('n', '<C-v>', function()
+      harpoon.ui:select_menu_item { vsplit = true }
+    end, { buffer = cx.bufnr })
+
+    vim.keymap.set('n', '<C-x>', function()
+      harpoon.ui:select_menu_item { split = true }
+    end, { buffer = cx.bufnr })
+
+    vim.keymap.set('n', '<C-t>', function()
+      harpoon.ui:select_menu_item { tabedit = true }
+    end, { buffer = cx.bufnr })
+  end,
+}
