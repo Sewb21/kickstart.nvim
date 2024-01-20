@@ -172,8 +172,8 @@ require('lazy').setup({
     -- See `:help lualine.txt`
     opts = {
       options = {
-        icons_enabled = false,
-        theme = 'onedark',
+        icons_enabled = true,
+        theme = 'tokyonight',
         component_separators = '|',
         section_separators = '',
       },
@@ -312,10 +312,14 @@ end
 
 -- document existing key chains
 require('which-key').register {
+  ['<leader>a'] = { name = 'Terminal', _ = 'which_key_ignore' },
   ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
   ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
   ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
   ['<leader>h'] = { name = '[H]arpoon', _ = 'which_key_ignore' },
+  ['<leader>n'] = { name = '[N]x', _ = 'which_key_ignore' },
+  ['<leader>nx'] = { name = '[Nx] actions', _ = 'which_key_ignore' },
+  ['<leader>p'] = { name = '[P]roject', _ = 'which_key_ignore' },
   ['<leader>r'] = { name = '[R]efactor', _ = 'which_key_ignore' },
   ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
   ['<leader>t'] = { name = '[T]oggle', _ = 'which_key_ignore' },

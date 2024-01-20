@@ -48,4 +48,14 @@ return {
       vim.keymap.set({ 'v', 'n' }, 'ca', require('actions-preview').code_actions)
     end,
   },
+  {
+    'akinsho/toggleterm.nvim',
+    version = '*',
+    keys = {
+      { '<Leader>at', '<cmd>ToggleTerm direction=float<CR>', desc = 'terminal float' },
+    },
+    config = function()
+      require 'custom.plugins.config.toggleterm'
+    end,
+  },
 }
