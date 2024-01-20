@@ -3,24 +3,6 @@
 --
 -- See the kickstart.nvim README for more information
 return {
-  -- {
-  --   'nvim-tree/nvim-tree.lua',
-  --   version = '*',
-  --   lazy = false,
-  --   dependencies = {
-  --     'nvim-tree/nvim-web-devicons',
-  --   },
-  --   cmd = {
-  --     'NvimTreeOpen',
-  --     'NvimTreeClose',
-  --     'NvimTreeToggle',
-  --     'NvimTreeFindFile',
-  --     'NvimTreeFindFileToggle',
-  --   },
-  --   config = function()
-  --     require 'custom.plugins.config.tree'
-  --   end,
-  -- },
   {
     'f-person/git-blame.nvim',
   },
