@@ -3,7 +3,11 @@ return {
     'jackMort/ChatGPT.nvim',
     event = 'VeryLazy',
     config = function()
-      require('chatgpt').setup()
+      require('chatgpt').setup {
+        openai_params = {
+          model = 'gpt-4',
+        },
+      }
     end,
     dependencies = {
       'MunifTanjim/nui.nvim',

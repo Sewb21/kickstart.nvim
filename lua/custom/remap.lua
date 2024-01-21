@@ -32,3 +32,19 @@ vim.keymap.set('n', '<Space>.', ':cn<CR>', silent)
 
 -- Don't yank on visual paste
 vim.api.nvim_set_keymap('v', 'p', '"_dP', silent)
+
+-- Move lines up, down, left and right
+-- Up
+vim.keymap.set('n', '<A-up>', ':m .-2<CR>==', silent)
+vim.keymap.set('v', '<A-up>', ":m '<-2<CR>gv=gv", silent)
+vim.keymap.set('i', '<A-up>', '<Esc>:m .-2<CR>==gi', silent)
+vim.keymap.set('n', '<A-k>', ':m .-2<CR>==', silent)
+vim.keymap.set('i', '<A-k>', '<Esc>:m .-2<CR>==gi', silent)
+vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv", silent)
+-- Down
+vim.keymap.set('n', '<A-down>', ':m .+1<CR>==', silent)
+vim.keymap.set('i', '<A-down>', '<Esc>:m .+1<CR>==gi', silent)
+vim.keymap.set('v', '<A-down>', ":m '>+1<CR>gv=gv", silent)
+vim.keymap.set('n', '<A-j>', ':m .+1<CR>==', silent)
+vim.keymap.set('i', '<A-j>', '<Esc>:m .+1<CR>==gi', silent)
+vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv", silent)
