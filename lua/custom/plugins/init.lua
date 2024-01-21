@@ -30,4 +30,10 @@ return {
       vim.keymap.set({ 'v', 'n' }, 'ca', require('actions-preview').code_actions)
     end,
   },
+  {
+    'windwp/nvim-ts-autotag',
+    config = function()
+      require('nvim-ts-autotag').setup()
+    end,
+  },
 }
