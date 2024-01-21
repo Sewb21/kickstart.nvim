@@ -1,30 +1,18 @@
--- return {
--- 'Equilibris/nx.nvim',
---
--- dependencies = {
---   'nvim-telescope/telescope.nvim',
--- },
---
--- opts = {
---   nx_cmd_root = 'npx nx',
---   read_init = true,
--- },
--- -- Plugin will load when you use these keys
--- keys = {
---   { '<leader>nx', '<cmd>Telescope nx actions<CR>', desc = 'nx actions' },
--- },
--- }
-
--- Configure the plugin
 return {
   {
     -- 'Equilibris/nx.nvim',
     -- Use my fork because main repo isn't working currently
     'Sewb21/nx.nvim',
 
-    opts = {
-      nx_cmd_root = 'npx nx',
-    },
+    config = function()
+      require('nx').setup({
+        nx_cmd_root = 'npx nx',
+        read_init = true,
+        command_runner = require('nx.command-runners').toggleterm_runner({
+          direction = 'vertical',
+        }),
+      })
+    end,
 
     init = function()
       local telescope = require 'telescope'
