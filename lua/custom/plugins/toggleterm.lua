@@ -5,7 +5,7 @@ return {
     keys = {
       { '<Leader>tf', '<cmd>ToggleTerm direction=float<CR>', desc = 'terminal float' },
       { '<Leader>tt', '<cmd>ToggleTerm direction=horizontal<CR>', desc = 'terminal top' },
-      { '<Leader>tb', '<cmd>ToggleTerm direction=horizontal size=20<CR>', desc = 'terminal bottom' },
+      { '<Leader>tb', '<cmd>ToggleTerm direction=horizontal size=30<CR>', desc = 'terminal bottom' },
       { '<Leader>tl', '<cmd>ToggleTerm direction=vertical<CR>', desc = 'terminal left' },
       { '<Leader>tr', '<cmd>ToggleTerm direction=vertical size=40<CR>', desc = 'terminal right' },
       { '<Leader>t1', '<cmd>ToggleTerm 1<C-\\><CR>', 'which_key_ignore = true', desc = 'terminal 1' },
