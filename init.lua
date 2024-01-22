@@ -274,6 +274,7 @@ require('which-key').register {
   ['<leader>f'] = { name = '[F]ile', _ = 'which_key_ignore' },
   ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
   ['<leader>h'] = { name = '[H]arpoon', _ = 'which_key_ignore' },
+  ['<leader>m'] = { name = '[M]arkdown', _ = 'which_key_ignore' },
   ['<leader>n'] = { name = '[N]x', _ = 'which_key_ignore' },
   ['<leader>nx'] = { name = '[Nx] actions', _ = 'which_key_ignore' },
   ['<leader>p'] = { name = '[P]roject', _ = 'which_key_ignore' },

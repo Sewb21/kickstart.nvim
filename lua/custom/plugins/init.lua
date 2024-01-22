@@ -26,4 +26,20 @@ return {
       require('nvim-surround').setup {}
     end,
   },
+  {
+    'iamcco/markdown-preview.nvim',
+    cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
+    keys = {
+      {
+
+        '<leader>mp',
+        '<cmd>MarkdownPreview<CR>',
+        'Markdown Preview',
+      },
+    },
+    ft = { 'markdown' },
+    build = function()
+      vim.fn['mkdp#util#install']()
+    end,
+  },
 }
