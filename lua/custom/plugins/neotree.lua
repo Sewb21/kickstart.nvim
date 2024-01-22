@@ -11,9 +11,9 @@ return {
   },
   config = function()
     require('neo-tree').setup {
-      vim.keymap.set('n', '<leader>fe', ':Neotree toggle<CR>', { desc = 'Toggle Explorer' }),
+      vim.keymap.set('n', '<leader>fe', ':Neotree toggle reveal<CR>', { desc = 'Toggle Explorer' }),
+      vim.keymap.set('n', '<leader>fs', ':Neotree action=show reveal<CR>', { desc = 'Show file explorer' }),
       event_handlers = {
-
         {
           event = 'file_opened',
           handler = function(file_path)
