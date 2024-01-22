@@ -51,3 +51,4 @@ vim.o.backspace = 'indent,eol,start'
 vim.o.scrolloff = 8
 
 vim.o.swapfile = false
+vim.o.backup = false
