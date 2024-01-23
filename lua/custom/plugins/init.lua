@@ -42,4 +42,10 @@ return {
       vim.fn['mkdp#util#install']()
     end,
   },
+  {
+    'tzachar/local-highlight.nvim',
+    config = function()
+      require('local-highlight').setup()
+    end,
+  },
 }
