@@ -32,8 +32,6 @@ vim.keymap.set('n', '<Space>.', ':cn<CR>', silent)
 
 -- Don't yank on visual paste
 vim.api.nvim_set_keymap('v', 'p', '"_dP', silent)
--- Don't yank on delete
-vim.api.nvim_set_keymap('n', 'd', '"_d', silent)
 
 -- Move lines up, down, left and right
 -- Up
