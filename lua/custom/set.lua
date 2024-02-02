@@ -52,3 +52,6 @@ vim.o.scrolloff = 8
 
 vim.o.swapfile = false
 vim.o.backup = false
+
+vim.o.spelllang = 'en_gb'
+vim.o.spell = true
