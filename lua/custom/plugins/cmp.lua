@@ -47,10 +47,14 @@ return {
         {
           name = 'copilot',
           priority = 10,
-          max_item_count = 5,
+          max_item_count = 3,
         },
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
+        { name = 'buffer' },
+        { name = 'path' },
+        { name = 'treesitter' },
+        { name = 'calc' },
       },
     }
   end,
