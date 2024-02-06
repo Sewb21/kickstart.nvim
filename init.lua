@@ -106,6 +106,10 @@ require('lazy').setup({
     config = function()
       -- load the colorscheme here
       vim.cmd [[colorscheme tokyonight]]
+
+      -- Set the background to none for the colorscheme
+      -- vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+      -- vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
     end,
   },
   { 'nvim-lua/plenary.nvim' },

@@ -5,6 +5,7 @@ return {
     -- your configuration comes here
     -- or leave it empty to use the default settings
     -- refer to the configuration section below
+    height = 100, -- height of the trouble list when position is top or bottom
   },
   config = function()
     -- Lua
