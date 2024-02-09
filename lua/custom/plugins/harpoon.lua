@@ -11,25 +11,37 @@ return {
 
       vim.keymap.set('n', '<leader>ha', function()
         harpoon:list():append()
+        print 'Added current buffer to harpoon list'
       end, { desc = 'Add current buffer to harpoon list' })
+
       vim.keymap.set('n', '<leader>hd', function()
         harpoon:list():remove()
+        print 'Removed current buffer from harpoon list'
       end, { desc = 'Remove current buffer from harpoon list' })
+
       vim.keymap.set('n', '<leader>hw', function()
         harpoon:list():clear()
+        print 'Wiped harpoon list'
       end, { desc = 'Wipe harpoon list' })
 
       vim.keymap.set('n', '<C-h>', function()
         harpoon:list():select(1)
+        print 'Selected first item in harpoon list'
       end)
+
       vim.keymap.set('n', '<C-t>', function()
         harpoon:list():select(2)
+        print 'Selected second item in harpoon list'
       end)
+
       vim.keymap.set('n', '<C-n>', function()
         harpoon:list():select(3)
+        print 'Selected third item in harpoon list'
       end)
+
       vim.keymap.set('n', '<C-s>', function()
         harpoon:list():select(4)
+        print 'Selected thrid item in harpoon list'
       end)
       -- basic telescope configuration
       local conf = require('telescope.config').values
