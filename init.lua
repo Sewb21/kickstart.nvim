@@ -136,7 +136,19 @@ require('lazy').setup({
         lualine_c = { { 'filename', path = 1 } },
         lualine_x = { 'encoding', 'fileformat', 'filetype' },
         lualine_y = { 'progress' },
-        lualine_z = { 'location' },
+        lualine_z = {
+          'location',
+          {
+            function()
+              for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+                if vim.api.nvim_buf_get_option(buf, 'modified') then
+                  return 'Unsaved buffers' -- any message or icon
+                end
+              end
+              return ''
+            end,
+          },
+        },
       },
     },
   },
