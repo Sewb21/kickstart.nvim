@@ -41,7 +41,7 @@ return {
 
       vim.keymap.set('n', '<C-s>', function()
         harpoon:list():select(4)
-        print 'Selected thrid item in harpoon list'
+        print 'Selected fourth item in harpoon list'
       end)
       -- basic telescope configuration
       local conf = require('telescope.config').values
