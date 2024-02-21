@@ -310,6 +310,7 @@ require('which-key').register {
   ['<leader>r'] = { name = '[R]efactor', _ = 'which_key_ignore' },
   ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
   ['<leader>t'] = { name = '[T]erminal', _ = 'which_key_ignore' },
+  ['<leader>u'] = { name = '[U]ndoTree', _ = 'which_key_ignore' },
   ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
   ['<leader>x'] = { name = 'Trouble', _ = 'which_key_ignore' },
 }
