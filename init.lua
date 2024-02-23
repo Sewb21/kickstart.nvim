@@ -107,7 +107,7 @@ require('lazy').setup({
     priority = 1000,
     config = function()
       -- load the colorscheme here
-      vim.cmd [[colorscheme tokyonight]]
+      vim.cmd [[colorscheme tokyonight-night]]
 
       -- Set the background to none for the colorscheme
       -- vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
