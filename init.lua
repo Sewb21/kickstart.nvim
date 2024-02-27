@@ -347,9 +347,6 @@ local servers = {
   -- gopls = {},
   -- pyright = {},
   -- rust_analyzer = {},
-  eslintd = {},
-  prettierd = {},
-  stylua = {},
   tsserver = {},
   html = { filetypes = { 'html', 'twig', 'hbs' } },
 

@@ -54,9 +54,7 @@ vim.keymap.set('n', '<Up>', '<Nop>', silent)
 vim.keymap.set('n', '<Down>', '<Nop>', silent)
 vim.keymap.set('n', '<Left>', '<Nop>', silent)
 vim.keymap.set('n', '<Right>', '<Nop>', silent)
--- vim.keymap.set('i', '<Up>', '<Nop>', silent)
--- vim.keymap.set('i', '<Down>', '<Nop>', silent)
--- vim.keymap.set('i', '<Left>', '<Nop>', silent)
--- vim.keymap.set('i', '<Right>', '<Nop>', silent)
--- vim.keymap.set('v', '<Up>', '<Nop>', silent)
--- vim.keymap.set('v', '<Down>', '<Nop>', silent)
+
+-- Center screen on half page up and down
+vim.keymap.set('n', '<C-u>', '<C-u>zz', silent)
+vim.keymap.set('n', '<C-d>', '<C-d>zz', silent)
