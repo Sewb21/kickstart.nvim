@@ -44,8 +44,6 @@ require 'custom.remap'
 -- Import custom sets
 require 'custom.set'
 
-local variabe = 'Incorect'
-
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
