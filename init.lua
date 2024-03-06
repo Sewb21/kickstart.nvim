@@ -358,7 +358,7 @@ local servers = {
   },
 
   eslint = {},
-  typos_lsp = {},
+  typos = {},
   tailwindcss = {},
   yamlls = {},
 }
