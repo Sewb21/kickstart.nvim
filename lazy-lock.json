@@ -20,6 +20,7 @@
   "goto-preview": { "branch": "main", "commit": "16ec236fabb40b2cebfe283b1d701338886462db" },
   "harpoon": { "branch": "harpoon2", "commit": "a38be6e0dd4c6db66997deab71fc4453ace97f9c" },
   "image.nvim": { "branch": "master", "commit": "77df64af37ff68a1f593aa4f79b42b1388479239" },
+  "image_preview.nvim": { "branch": "main", "commit": "61322c28bc96794225bbb38fc7118908d92184d1" },
   "indent-blankline.nvim": { "branch": "master", "commit": "12e92044d313c54c438bd786d11684c88f6f78cd" },
   "lazy.nvim": { "branch": "main", "commit": "83493db50a434a4c5c648faf41e2ead80f96e478" },
   "local-highlight.nvim": { "branch": "master", "commit": "b5c45c0383f814b7b1498dd53fdd840750d50243" },
