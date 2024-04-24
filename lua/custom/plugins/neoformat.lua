@@ -7,11 +7,6 @@ vim.api.nvim_create_autocmd('BufWritePre', {
   end,
 })
 
-vim.api.nvim_create_autocmd('BufWritePre', {
-  pattern = { '*.templ' },
-  callback = vim.lsp.buf.format,
-})
-
 return {
   'sbdchd/neoformat',
 }
