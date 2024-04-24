@@ -188,8 +188,7 @@ require('lazy').setup({
       -- requirements installed.
       {
         'nvim-telescope/telescope-fzf-native.nvim',
-        -- NOTE: If you are having trouble with this installation,
-        --       refer to the README for telescope-fzf-native for more instructions.
+        'vrischmann/tree-sitter-templ',
         build = 'make',
         cond = function()
           return vim.fn.executable 'make' == 1
@@ -207,9 +206,24 @@ require('lazy').setup({
     build = ':TSUpdate',
     config = function()
       require('nvim-treesitter.configs').setup {
-        ensure_installed = { 'lua', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'html', 'astro', 'svelte', 'go' },
+        ensure_installed = {
+          'lua',
+          'tsx',
+          'javascript',
+          'typescript',
+          'vimdoc',
+          'vim',
+          'bash',
+          'html',
+          'astro',
+          'svelte',
+          'go',
+          'templ',
+        },
         highlight = { enable = true },
         indent = { enable = true },
+        sync_install = false,
+        auto_install = true,
       }
     end,
   },
@@ -341,11 +355,20 @@ require('mason-lspconfig').setup()
 --  define the property 'filetypes' to the map in question.
 local servers = {
   -- clangd = {},
-  -- gopls = {},
+  gopls = {},
+  templ = {
+    filetypes = { 'templ' },
+  },
   -- pyright = {},
   -- rust_analyzer = {},
   -- tsserver = {},
-  html = { filetypes = { 'html', 'twig', 'hbs' } },
+  html = {
+    filetypes = { 'html', 'templ' },
+  },
+
+  htmx = {
+    filetypes = { 'html', 'templ' },
+  },
 
   lua_ls = {
     Lua = {
@@ -357,7 +380,10 @@ local servers = {
   },
 
   eslint = {},
-  tailwindcss = {},
+  tailwindcss = {
+    filetypes = { 'templ', 'astro', 'javascript', 'typescript', 'react' },
+    init_options = { userLanguages = { templ = 'html' } },
+  },
   yamlls = {},
 }
 
