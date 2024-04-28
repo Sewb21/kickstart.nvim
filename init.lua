@@ -364,12 +364,7 @@ local servers = {
   -- rust_analyzer = {},
   -- tsserver = {},
 
-  omnisharp = {
-    filetypes = { 'cs' },
-  },
-  csharpier = {
-    filetypes = { 'cs' },
-  },
+  omnisharp = {},
 
   html = {
     filetypes = { 'html', 'templ' },
@@ -421,6 +416,7 @@ mason_lspconfig.setup_handlers {
   end,
 }
 
+-- Templ (Go templating) Configuration
 local custom_format = function()
   if vim.bo.filetype == 'templ' then
     local bufnr = vim.api.nvim_get_current_buf()
