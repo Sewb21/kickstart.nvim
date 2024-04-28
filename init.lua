@@ -215,10 +215,11 @@ require('lazy').setup({
           'vim',
           'bash',
           'html',
-          'astro',
           'svelte',
           'go',
           'templ',
+          'c_sharp',
+          'markdown',
         },
         highlight = { enable = true },
         indent = { enable = true },
@@ -362,10 +363,17 @@ local servers = {
   -- pyright = {},
   -- rust_analyzer = {},
   -- tsserver = {},
+
+  omnisharp = {
+    filetypes = { 'cs' },
+  },
+  csharpier = {
+    filetypes = { 'cs' },
+  },
+
   html = {
     filetypes = { 'html', 'templ' },
   },
-
   htmx = {
     filetypes = { 'html', 'templ' },
   },
@@ -384,6 +392,7 @@ local servers = {
     filetypes = { 'templ', 'astro', 'javascript', 'typescript', 'react' },
     init_options = { userLanguages = { templ = 'html' } },
   },
+
   yamlls = {},
 }
 
