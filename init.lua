@@ -361,7 +361,7 @@ local servers = {
   -- },
   -- pyright = {},
   -- rust_analyzer = {},
-  -- tsserver = {},
+  tsserver = {},
 
   omnisharp = {},
 
