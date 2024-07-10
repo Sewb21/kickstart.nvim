@@ -207,7 +207,6 @@ require('lazy').setup({
     config = function()
       require('nvim-treesitter.configs').setup {
         ensure_installed = {
-          'astro',
           'lua',
           'tsx',
           'javascript',
@@ -217,7 +216,6 @@ require('lazy').setup({
           'bash',
           'html',
           'svelte',
-          'go',
           'templ',
           'c_sharp',
           'markdown',
@@ -357,10 +355,10 @@ require('mason-lspconfig').setup()
 --  define the property 'filetypes' to the map in question.
 local servers = {
   -- clangd = {},
-  gopls = {},
-  templ = {
-    filetypes = { 'templ' },
-  },
+  -- gopls = {},
+  -- templ = {
+  --   filetypes = { 'templ' },
+  -- },
   -- pyright = {},
   -- rust_analyzer = {},
   -- tsserver = {},
@@ -418,26 +416,26 @@ mason_lspconfig.setup_handlers {
 }
 
 -- Templ (Go templating) Configuration
-local custom_format = function()
-  if vim.bo.filetype == 'templ' then
-    local bufnr = vim.api.nvim_get_current_buf()
-    local filename = vim.api.nvim_buf_get_name(bufnr)
-    local cmd = 'templ fmt ' .. vim.fn.shellescape(filename)
-
-    vim.fn.jobstart(cmd, {
-      on_exit = function()
-        -- Reload the buffer only if it's still the current buffer
-        if vim.api.nvim_get_current_buf() == bufnr then
-          vim.cmd 'e!'
-        end
-      end,
-    })
-  else
-    vim.lsp.buf.format()
-  end
-end
-
-vim.api.nvim_create_autocmd({ 'BufWritePre' }, { pattern = { '*.templ' }, callback = custom_format })
+-- local custom_format = function()
+--   if vim.bo.filetype == 'templ' then
+--     local bufnr = vim.api.nvim_get_current_buf()
+--     local filename = vim.api.nvim_buf_get_name(bufnr)
+--     local cmd = 'templ fmt ' .. vim.fn.shellescape(filename)
+--
+--     vim.fn.jobstart(cmd, {
+--       on_exit = function()
+--         -- Reload the buffer only if it's still the current buffer
+--         if vim.api.nvim_get_current_buf() == bufnr then
+--           vim.cmd 'e!'
+--         end
+--       end,
+--     })
+--   else
+--     vim.lsp.buf.format()
+--   end
+-- end
+--
+-- vim.api.nvim_create_autocmd({ 'BufWritePre' }, { pattern = { '*.templ' }, callback = custom_format })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
